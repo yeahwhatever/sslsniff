@@ -89,7 +89,7 @@ int HttpHeaders::readAction(char *buffer, int length) {
   int offset   = 0;
   int complete = readLine(buffer, &offset, length);
 
-  action.append(buffer, offset+1);
+  action.append(buffer, offset);
 
   if (complete) {
     parseAction();
